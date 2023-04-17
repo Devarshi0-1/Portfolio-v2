@@ -123,13 +123,13 @@ export default function ProjectSlides() {
 			target_self: true,
 			summaryText: (
 				<>
-					<span>Personal Portfolio</span>; You are here take a look! This
+					<span>Personal Portfolio-v2</span>; You are here take a look! This
 					portfolio is made with <strong>Astro + ReactJS</strong> and uses the{' '}
 					<strong>API Flash</strong> to automate the Screenshots of my projects.
 					Take a good look, be the judge!
 				</>
 			),
-			repoURL: '#',
+			repoURL: 'https://github.com/Devarshi0-1/Portfolio-v2',
 		},
 	];
 
