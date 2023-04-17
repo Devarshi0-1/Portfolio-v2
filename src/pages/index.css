@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+html,
+body {
+	overflow-x: hidden !important;
+	scroll-behavior: smooth;
+	scroll-padding-top: 35px;
+	font-family: 'Poppins', sans-serif;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	transition: color 500ms, background-color 500ms, scale 500ms;
+}
+
+input,
+textarea,
+button,
+select {
+	font-family: inherit;
+}
+
+.light_mode {
+	--bg-clr-primary: rgb(157, 243, 196);
+	--clr-accent: rgb(31, 171, 137);
+	--clr-accent-light: rgba(31, 171, 136, 0.7);
+	--clr-text: rgb(255, 255, 255);
+	--clr-sec-text: rgb(0, 0, 0);
+}
+
+.dark_mode {
+	--bg-clr-primary: rgb(41, 38, 76);
+	--clr-accent: rgb(61, 132, 168);
+	--clr-accent-light: rgba(61, 132, 168, 0.7);
+	--clr-text: rgb(0, 0, 0);
+	--clr-sec-text: rgb(255, 255, 255);
+}
+
+body {
+	background-color: var(--bg-clr-primary);
+}
+
+::-webkit-scrollbar {
+	width: 10px;
+}
+
+::-webkit-scrollbar-track {
+	background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+	background-color: rgba(128, 128, 128, 0.509);
+	border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background-color: rgba(128, 128, 128, 0.309);
+}
+
+.scrollUp {
+	height: 50px;
+	width: 50px;
+	position: fixed;
+	bottom: 111px;
+	left: 95%;
+	background-color: var(--clr-accent);
+	border-radius: 10px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	opacity: 0.6;
+}
+
+.scrollUp svg {
+	height: 40px;
+	fill: white;
+}
+
+:where(.flex-center) {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.primaryBtn {
+	position: relative;
+	overflow: hidden;
+	height: 60px;
+	width: 200px;
+	margin: auto 0;
+	border-radius: 10px;
+	border-width: 0;
+	font-size: 20px;
+	cursor: pointer;
+	transition: transform ease-in 200ms;
+	background-color: transparent;
+	z-index: 3;
+}
+
+.primaryBtn::after {
+	content: '';
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	top: 0;
+	left: 0;
+	border-radius: 10px;
+	transform: scaleX(0);
+	transform-origin: left;
+	transition: transform 500ms;
+	background-color: rgb(78, 66, 156);
+	z-index: -1;
+}
+
+.primaryBtn::before {
+	content: '';
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	top: 0;
+	left: 0;
+	border-radius: 10px;
+	background-color: var(--clr-accent);
+	z-index: -1;
+}
+
+.primaryBtn:hover::after {
+	transform: scaleX(1);
+}
+
+.primaryBtn > a {
+	text-decoration: none;
+	color: white;
+}
+
+@media screen and (max-width: 600px) {
+	.scrollUp {
+		display: none;
+	}
+}
