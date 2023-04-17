@@ -1,0 +1,146 @@
+#about {
+    height: 100vh;
+    width: 80%;
+    margin: 0 auto;
+    padding-top: 90px;
+    flex-direction: column;
+    position: relative;
+    background-color: var(--bg-clr-primary);
+}
+
+#about h1 {
+    font-size: 65px;
+    opacity: 0.8;
+    color: var(--clr-sec-text);
+}
+
+#about h2 {
+    font-size: 20px;
+    opacity: 0.5;
+    color: var(--clr-sec-text);
+}
+
+.aboutGridContainer {
+    display: grid;
+    grid-template-rows: 2fr 3fr;
+    grid-template-columns: repeat(2, 50%);
+    height: 440px;
+    width: 85%;
+    margin: auto auto;
+}
+
+.aboutImg {
+    width: 470px;
+    border-radius: 10px;
+    grid-row-start: 1;
+    grid-row-end: 4;
+    margin: auto 0;
+}
+
+.aboutGridContainer > p {
+    font-size: 23px;
+    opacity: 0.7;
+    padding-top: 20px;
+    color: var(--clr-sec-text);
+}
+
+.experienceSection {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    font-size: 30px;
+    color: var(--clr-sec-text);
+}
+
+.yearsExp,
+.projects,
+.workExp {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    place-items: center;
+    font-weight: 900;
+    text-align: center;
+}
+
+.yearsExp :nth-child(2),
+.projects :nth-child(2),
+.workExp :nth-child(2) {
+    font-size: 20px;
+    text-align: center;
+    font-weight: 400;
+    opacity: 0.7;
+}
+
+.experienceSection .primaryBtn a {
+    gap: 10px;
+}
+
+.experienceSection .primaryBtn svg {
+    font-size: 30px;
+}
+
+/* SMALL DEVICES */
+
+@media screen and (max-width: 600px) {
+    #about {
+        padding-top: 40px;
+        height: fit-content;
+    }
+
+    #about h1 {
+        font-size: 50px;
+    }
+
+    .aboutGridContainer {
+        display: flex;
+        flex-direction: column;
+        margin: 40px 0;
+    }
+
+    .aboutImg {
+        width: 240px;
+    }
+
+    .aboutGridContainer > p {
+        font-size: 15px;
+        text-align: center;
+    }
+
+    .experienceSection {
+        margin-top: 10px;
+    }
+
+    .yearsExp,
+    .projects,
+    .workExp {
+        font-size: 20px;
+    }
+
+    .yearsExp :nth-child(2),
+    .projects :nth-child(2),
+    .workExp :nth-child(2) {
+        font-size: 10px;
+    }
+
+    .cvBtn {
+        margin: auto;
+        height: 35px;
+        width: 150px;
+        font-size: 15px;
+    }
+
+    .experienceSection .primaryBtn {
+        grid-row-start: 2;
+        grid-row-end: 3;
+        grid-column-start: 1;
+        grid-column-end: 4;
+        height: 40px;
+        width: 120px;
+        font-size: 13px;
+        margin-right: 10px;
+    }
+
+    .downloadIco {
+        width: 15px;
+    }
+}
