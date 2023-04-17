@@ -2,7 +2,7 @@ import { AiFillHtml5 } from 'react-icons/ai';
 import { DiCss3 } from 'react-icons/di';
 import { SiJavascript } from 'react-icons/si';
 import { FaReact } from 'react-icons/fa';
-import AstroIcon from '/public/favicon.svg';
+import AstroIcon from './../../assets/portfolioImgs/favicon.svg';
 import './projectSlide.css';
 
 function ProjectSlide({
