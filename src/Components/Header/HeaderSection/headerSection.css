@@ -102,9 +102,14 @@
     left: -20px;
 }
 
-.verticalSocials * {
+.verticalSocials svg {
     font-size: 25px;
     fill: var(--clr-accent);
+    transition: opacity 500ms ease-in-out;
+}
+
+.verticalSocials svg:hover{
+    opacity: 0.5;
 }
 
 .scrollDown {
