@@ -10,7 +10,6 @@ import UltimateTodoImg from './assets/portfolioImgs/ultimateTodoImg.png';
 import { AiFillHtml5 } from 'react-icons/ai';
 import { DiCss3 } from 'react-icons/di';
 import { SiJavascript } from 'react-icons/si';
-// import { FaReact } from "react-icons/fa"
 import { SiFirebase } from 'react-icons/si';
 import { FaNodeJs } from 'react-icons/fa';
 import { SiMongodb } from 'react-icons/si';
