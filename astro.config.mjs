@@ -8,5 +8,8 @@ export default defineConfig({
 	integrations: [react()],
 	vite: {
 		plugins: [svgr()],
+		ssr: {
+			noExternal: ['react-icons'],
+		},
 	},
 });
