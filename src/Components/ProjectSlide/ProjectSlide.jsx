@@ -28,8 +28,6 @@ function ProjectSlide({
 		return () => observer.disconnect();
 	}, []);
 
-	console.log(altText);
-
 	return (
 		<div
 			className='cardWrapper'
