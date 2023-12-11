@@ -1,10 +1,10 @@
-import { useRef } from "react"
+import { useRef, useEffect } from "react"
+import { useActiveTabStore } from "../store"
 import emailjs from "@emailjs/browser"
+import * as yup from "yup"
 import { useForm } from "react-hook-form"
 import { yupResolver } from "@hookform/resolvers/yup"
-import * as yup from "yup"
-import PhoneIco from "./../../assets/icons/phone.svg?react"
-import MailIco from "./../../assets/icons/mail.svg?react"
+import { FiPhone, FiMail } from "react-icons/fi"
 import "./contact.css"
 
 const schema = yup.object().shape({
@@ -19,10 +19,11 @@ const schema = yup.object().shape({
 
 function Contact() {
     const form = useRef()
+    const contactSec = useRef()
     const {
         register,
         handleSubmit,
-        formState: { errors },
+        formState: { isLoading, errors },
     } = useForm({
         resolver: yupResolver(schema),
     })
@@ -30,10 +31,10 @@ function Contact() {
     const sendEmail = () => {
         emailjs
             .sendForm(
-                "service_5jy0pyd",
-                "template_84825uq",
+                "service_q8bttqb",
+                "template_qnxfu3m",
                 form.current,
-                "TlCkPF1bWfjNQoRfp"
+                "80OiAn-VHGf8dgbiy"
             )
             .then(
                 (result) => {
@@ -46,10 +47,29 @@ function Contact() {
             )
     }
 
+    const setActiveTab = useActiveTabStore((state) => state.setActiveTab)
+
+    useEffect(() => {
+        const observer = new IntersectionObserver(
+            (entries) => {
+                if (entries[0].isIntersecting) {
+                    setActiveTab("contact")
+                }
+            },
+            {
+                threshold: 0.5,
+            }
+        )
+
+        observer.observe(contactSec.current)
+
+        return () => observer.disconnect()
+    }, [])
+
     return (
-        <section id='contact' className='flex-center'>
-            <h1>Contact</h1>
-            <h2>Let's work together</h2>
+        <section id='contact' className='flex-center' ref={contactSec}>
+            <h1 className='sectionMainHeading'>Contact</h1>
+            <h2 className='sectionSecondaryHeading'>Let's work together</h2>
             <div className='contactContainer'>
                 <div className='formCont'>
                     <h2>Let's Build Something Great Together</h2>
@@ -80,7 +100,13 @@ function Contact() {
                             placeholder='Message'
                             name='message'></textarea>
                         <p>{errors.message?.message}</p>
-                        <button className='primaryBtn'>Send Message</button>
+                        <button className='primaryBtn'>
+                            {isLoading ? (
+                                <span class='loader'></span>
+                            ) : (
+                                "Send Message"
+                            )}
+                        </button>
                     </form>
                 </div>
                 <div className='contactOuterCont flex-center'>
@@ -88,11 +114,11 @@ function Contact() {
                         <h2>Get In Touch</h2>
                         <div className='contactGrid'>
                             <div className='phoneIcon flex-center'>
-                                <PhoneIco />
+                                <FiPhone />
                             </div>
                             <p>Phone: +91 6393-9635-99</p>
                             <div className='emailIcon flex-center'>
-                                <MailIco />
+                                <FiMail />
                             </div>
                             <p>Email: devarshidwi@gmail.com</p>
                         </div>

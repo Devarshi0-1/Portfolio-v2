@@ -1,21 +1,8 @@
 #projects {
     min-height: 100vh;
-    width: 85%;
+    width: fit-content;
     margin: 150px auto 0;
     flex-direction: column;
-}
-
-#projects h1 {
-    font-size: 65px;
-    opacity: 0.8;
-    color: var(--clr-sec-text);
-}
-
-#projects h2 {
-    font-size: 20px;
-    opacity: 0.5;
-    margin-bottom: 4rem;
-    color: var(--clr-sec-text);
 }
 
 .projectsContainer {
@@ -25,21 +12,30 @@
     gap: 2.5rem;
 }
 
+#projects .showMore{
+    color: var(--clr-sec-text);
+    margin-left: auto;
+    margin-top: 3rem;
+    cursor: pointer;
+    transition: color 500ms;
+}
+
+#projects .showMore:hover{
+    color: rgb(196, 196, 196);
+}
+
 /* SMALL DEVICES */
 @media screen and (max-width: 600px) {
     #projects {
         width: 100%;
         margin-top: 0;
-        justify-content: unset;
         padding-top: 40px;
         height: unset;
     }
 
-    #projects h1 {
-        font-size: 50px;
-    }
-
     .projectsContainer {
         height: 60%;
+        gap: 1rem;
+        padding: 0.5rem;
     }
 }

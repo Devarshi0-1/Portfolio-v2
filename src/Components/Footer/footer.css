@@ -1,7 +1,7 @@
 footer {
-    margin-top: 100px;
-    min-height: 300px;
+    padding: 5rem 0;
     width: 100%;
+    overflow: hidden;
     border-top: 1px solid rgba(255, 255, 255, 0.386);
 }
 
@@ -38,9 +38,17 @@ footer {
     color: inherit;
 }
 
-.socials {
-    height: 40%;
+.footerContentCont .socials {
     justify-content: space-evenly;
+    font-size: 1.7rem;
+}
+
+.footerContentCont .socials > * {
+    transition: opacity ease-in-out 500ms;
+}
+
+.footerContentCont .socials > *:hover {
+    opacity: 0.6;
 }
 
 .footerContentCont > :last-child {
@@ -54,17 +62,12 @@ footer {
 
 @media screen and (max-width: 600px) {
     footer {
-        height: 145px;
+        padding: 3rem 0.5rem;
         margin-top: 60px;
     }
 
     .footerContentCont {
         width: 100%;
-    }
-
-    .footerNameInfo {
-        height: 50%;
-        margin-left: 14px;
     }
 
     .footerNameInfo > h2 {
@@ -92,13 +95,12 @@ footer {
     }
 
     .socials > * {
-        margin: 5px 0;
-        font-size: 20px;
+        font-size: 1rem;
     }
 
     .footerContentCont > :last-child {
-        bottom: 1px px;
+        bottom: -10%;
         left: 25%;
-        font-size: 13px;
+        font-size: 0.8rem;
     }
 }
