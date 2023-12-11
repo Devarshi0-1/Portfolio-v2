@@ -47,4 +47,7 @@ nav ul li:hover {
     nav ul {
         font-size: 0.8rem;
     }
+    nav ul li{
+        padding: 0.2rem 0.4rem;
+    }
 }

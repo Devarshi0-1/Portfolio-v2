@@ -20,9 +20,6 @@ dependencies:
   '@types/react-dom':
     specifier: ^18.0.6
     version: 18.2.17
-  '@vercel/speed-insights':
-    specifier: ^1.0.1
-    version: 1.0.1
   astro:
     specifier: ^2.3.0
     version: 2.10.15
@@ -1427,11 +1424,6 @@ packages:
 
   /@types/yargs-parser@21.0.3:
     resolution: {integrity: sha512-I4q9QU9MQv4oEOz4tAHJtNz1cwuLxn2F3xcc2iV5WdqLPpUnj30aUuxt1mAxYTG+oe8CZMV/+6rU4S4gRDzqtQ==}
-    dev: false
-
-  /@vercel/speed-insights@1.0.1:
-    resolution: {integrity: sha512-cm8KTTsDgS1AbWsgIEZuMoyPUjclzeqJihyLp0tnA21B/x9iTE8hu2S5zM+/DBzihuHxWL1dx9pCWk22ctMFWQ==}
-    requiresBuild: true
     dev: false
 
   /@vscode/emmet-helper@2.9.2:
