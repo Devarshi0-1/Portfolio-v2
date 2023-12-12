@@ -49,13 +49,15 @@ function ProjectSlide({
 			<div className='iconsCont'>
 				<a
 					href={repoURL}
-					target='_blank'>
+					target='_blank'
+					aria-label='Github'>
 					<FiGithub />
 				</a>
 				<p>{name}</p>
 				<a
 					href={projectURL}
-					target={`${targetSelf ? '_self' : '_blank'}`}>
+					target={`${targetSelf ? '_self' : '_blank'}`}
+					aria-label='Self'>
 					<FiExternalLink />
 				</a>
 			</div>
