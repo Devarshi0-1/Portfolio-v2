@@ -1,14 +1,14 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&display=swap');
-
 html,
 body {
 	overflow: hidden auto;
 	scroll-behavior: smooth;
 	scroll-padding-top: 35px;
-	font-family: 'Poppins', sans-serif;
+	font-family: system-ui, sans-serif;
 }
 
-* {
+*,
+*::before,
+*::after {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
